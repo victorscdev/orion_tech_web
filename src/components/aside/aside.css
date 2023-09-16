@@ -1,0 +1,27 @@
+aside {
+    background-color: #14688B;
+    padding: 24px;
+    width: 500px;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside ul li {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 32px;
+    
+}
+
+aside ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+aside ul li.active {
+    color: #30ABE4;
+    text-decoration: underline;
+}
