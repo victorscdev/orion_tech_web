@@ -3,4 +3,6 @@
 @import url('./_reset.css');
 @import url('./_typography.css');
 @import url('/src/components/aside/aside.css');
-@import url('/src/components/table/table.css')
+@import url('/src/components/HTML/tables/tables.css');
+@import url('/src/components/HTML/buttons/buttons.css');
+@import url('/src/components/HTML/dialogs/dialogs.css');

@@ -27,3 +27,24 @@ export const array_header = [
         handler: handler__get_time_sheet
     },
 ]
+
+export let array_employees = [
+    {
+        name: '',
+        office: '',
+        departament: '',
+        wage: 0,
+        benefits: '',
+        deductions: 0,
+        net_salary: 0,
+    },
+    {
+        name: 'Victor Santana Costa',
+        office: 'Software engineer',
+        departament: 'Payments',
+        wage: 10000,
+        benefits: 'VR, VT',
+        deductions: 2000,
+        net_salary: 8000,
+    }
+]

@@ -7,6 +7,8 @@ aside {
 aside img {
     max-width: 100%;
     height: auto;
+    margin-left: -50px;
+    margin-top: -60px;
 }
 
 aside ul li {
