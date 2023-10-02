@@ -1,12 +1,24 @@
+import { HTML__form_control } from "../forms/forms.js";
+import { array_form_employees } from "../../../model/constants.js";
+
 function HTML__create_new_employee() {
     let create__dialog = document.createElement('dialog');
     create__dialog.id = 'DIALOG__new_employee';
 
     create__dialog.innerHTML = `
-        <h2>Título do Diálogo</h2>
+        <div class="HEADER__dialog">
+            <h2>Título do Diálogo</h2>
+        </div>
         <hr />
-        <p>Conteúdo do Diálogo</p>
-        <button id="CLOSE__dialog">Fechar</button>
+        <div class="BODY__dialog">
+            <div class="FORM__group">
+                ${array_form_employees.map((employee) => `${HTML__form_control(employee)}`).join('')}
+            </div>
+        </div>
+        <hr />
+        <div class="FOOTER__dialog">
+            <button id="CLOSE__dialog">Fechar</button>
+        </div>
     `;
 
     return create__dialog

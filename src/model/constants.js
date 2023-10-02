@@ -28,7 +28,7 @@ export const array_header = [
     },
 ]
 
-export let array_employees = [
+export const array_employees = [
     {
         name: '',
         office: '',
@@ -47,4 +47,27 @@ export let array_employees = [
         deductions: 2000,
         net_salary: 8000,
     }
+]
+
+export const array_form_employees = [
+    {
+        label: 'Nome do Funcionario',
+        for: 'nome_funcionario',
+        type: 'text'
+    },
+    {
+        label: 'Cargo',
+        for: 'cargo',
+        type: 'text'
+    },
+    {
+        label: 'Departamento',
+        for: 'departamento',
+        type: 'text'
+    },
+    {
+        label: 'Salario inicial',
+        for: 'salario_inicial',
+        type: 'number'
+    },
 ]

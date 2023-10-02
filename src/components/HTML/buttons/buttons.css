@@ -1,10 +1,13 @@
-.btn_register {
+button {
     cursor: pointer;
-    background: #14688B;
-    color: #ffffff;
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 16px 32px;
+}
+
+.btn_register {
+    background: #14688B;
+    color: #ffffff;
 }
 
 .btn_register:hover {
