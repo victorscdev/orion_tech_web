@@ -18,3 +18,11 @@ dialog .FOOTER__dialog {
     align-items: center;
     justify-content: flex-end;
 }
+
+dialog .FOOTER__dialog button {
+    margin-right: 16px;
+}
+
+dialog .FOOTER__dialog button:last-of-type {
+    margin-right: 0;
+}

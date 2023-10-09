@@ -1,49 +1,64 @@
-import { HTML__active_li, HTML__clear_main_and_add_info_main } from "./global_functions.js"
-import { HTML__add_tags_employee } from "../components/employees/employees.js"
+import { EmployeesPages } from "../components/pages/employees/employees.pages.js";
+import { GlobalFunctions } from "../model/global_functions.js"
 
-export function handler__get_employee(event) {
-    HTML__active_li(event.target.textContent)
+export class Handlers {
+    constructor() {}
+
+    async get_employee(event) {
+        const _employeesPages = new EmployeesPages();
+        const _globalFunctions = new GlobalFunctions();
+
+        _globalFunctions.HTML__active_li(event.target.textContent)
+        
+        const HTML__h1 = document.createElement('h1')
+        HTML__h1.innerText = 'Funcionarios'
+        
+        _globalFunctions.HTML__clear_main_and_add_info_main(await _employeesPages.HTML__add_tags_employee())
+        
+    }
     
-    const HTML__h1 = document.createElement('h1')
-    HTML__h1.innerText = 'Funcionarios'
+    get_payments(event) {
+        const _globalFunctions = new GlobalFunctions();
+
+        _globalFunctions.HTML__active_li(event.target.textContent)
     
-    HTML__clear_main_and_add_info_main(HTML__add_tags_employee())
+        const HTML__h1 = document.createElement('h1')
+        HTML__h1.innerText = 'Pagamentos'
     
-}
-
-export function handler__get_payments(event) {
-    HTML__active_li(event.target.textContent)
-
-    const HTML__h1 = document.createElement('h1')
-    HTML__h1.innerText = 'Pagamentos'
-
-    HTML__clear_main_and_add_info_main(HTML__h1)
-}
-
-export function handler__get_deductions(event) {
-    HTML__active_li(event.target.textContent)
-
-    const HTML__h1 = document.createElement('h1')
-    HTML__h1.innerText = 'Deduções'
-
-    HTML__clear_main_and_add_info_main(HTML__h1)
-}
-
-export function handler__get_benefits(event) {
-    HTML__active_li(event.target.textContent)
-
+        _globalFunctions.HTML__clear_main_and_add_info_main(HTML__h1)
+    }
     
-    const HTML__h1 = document.createElement('h1')
-    HTML__h1.innerText = 'Beneficios'
+    get_deductions(event) {
+        const _globalFunctions = new GlobalFunctions();
 
-    HTML__clear_main_and_add_info_main(HTML__h1)
-}
+        _globalFunctions.HTML__active_li(event.target.textContent)
+    
+        const HTML__h1 = document.createElement('h1')
+        HTML__h1.innerText = 'Deduções'
+    
+        _globalFunctions.HTML__clear_main_and_add_info_main(HTML__h1)
+    }
+    
+    get_benefits(event) {
+        const _globalFunctions = new GlobalFunctions();
 
-export function handler__get_time_sheet(event) {
-    HTML__active_li(event.target.textContent)
+        _globalFunctions.HTML__active_li(event.target.textContent)
+    
+        
+        const HTML__h1 = document.createElement('h1')
+        HTML__h1.innerText = 'Beneficios'
+    
+        _globalFunctions.HTML__clear_main_and_add_info_main(HTML__h1)
+    }
+    
+    get_time_sheet(event) {
+        const _globalFunctions = new GlobalFunctions();
 
-    const HTML__h1 = document.createElement('h1')
-    HTML__h1.innerText = 'Folha de Ponto'
-
-    HTML__clear_main_and_add_info_main(HTML__h1)
+        _globalFunctions.HTML__active_li(event.target.textContent)
+    
+        const HTML__h1 = document.createElement('h1')
+        HTML__h1.innerText = 'Folha de Ponto'
+    
+        _globalFunctions.HTML__clear_main_and_add_info_main(HTML__h1)
+    }
 }
