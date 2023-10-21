@@ -1,4 +1,4 @@
-import { EmployeesPages } from "../components/pages/employees/employees.pages.js";
+import { EmployeesPages } from "../components/PAGES/employees/employees.pages.js";
 import { GlobalFunctions } from "../model/global_functions.js"
 
 export class Handlers {
