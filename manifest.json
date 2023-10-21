@@ -9,7 +9,7 @@
     "icons": [
         {
             "src": "./assets/icons/windows11/SmallTile.scale-200.png",
-            "sizes": "192x192",
+            "sizes": "200x200",
             "type": "image/png"
         }
     ]
