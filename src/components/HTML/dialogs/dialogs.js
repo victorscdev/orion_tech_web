@@ -4,11 +4,9 @@ import { EmployeesBusiness } from "../../../business/employees.business.js";
 
 export class DialogHTML {
     _formsHTML;
-    _employeesBusiness
 
     constructor() {
         this._formsHTML = new FormsHTML()
-        this._employeesBusiness = new EmployeesBusiness();
     }
 
     HTML__create_new_employee() {
@@ -57,13 +55,15 @@ export class DialogHTML {
     }
     
     SAVE__dialog_new_employee() {
-        this._employeesBusiness.create(
-            {
-                name: 'Victor Santana Costa',
-                office: 'Software engineer',
-                departament: 'Payments',
-                wage: 10000
-            }
-        )
+        let objectPayload = {};
+        const _employeesBusiness = new EmployeesBusiness();
+        const formEmployee = document.querySelectorAll("#DIALOG__new_employee .BODY__dialog .FORM__group input")
+        
+        for (let index = 0; index < formEmployee.length; index++) {
+            const element = formEmployee[index];
+            objectPayload[element.name] = element.value
+            
+        }
+        _employeesBusiness.create(objectPayload)
     }
 }

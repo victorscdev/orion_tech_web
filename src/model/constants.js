@@ -54,22 +54,22 @@ export const array_employees = [
 export const array_form_employees = [
     {
         label: 'Nome do Funcionario',
-        for: 'nome_funcionario',
+        for: 'name',
         type: 'text'
     },
     {
         label: 'Cargo',
-        for: 'cargo',
+        for: 'office',
         type: 'text'
     },
     {
         label: 'Departamento',
-        for: 'departamento',
+        for: 'departament',
         type: 'text'
     },
     {
         label: 'Salario inicial',
-        for: 'salario_inicial',
+        for: 'wage',
         type: 'number'
     },
 ]

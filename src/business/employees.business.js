@@ -1,4 +1,6 @@
 import { EmployeesService } from "../services/employees.service.js";
+import { DialogHTML } from "../components/HTML/dialogs/dialogs.js";
+import { TablesHTML } from "../components/HTML/tables/tables.js";
 
 export class EmployeesBusiness {
     _employeesService;
@@ -45,7 +47,14 @@ export class EmployeesBusiness {
         }
 
         await this._employeesService.db_create(this.set_new(employee));
-        console.log(this._employeesService.db_create_response);
+        const _DialogHTML = new DialogHTML()
+        if(this._employeesService.db_create_response.ok) {
+           await this._employeesService.db_read()
+            const _TablesHTML = new TablesHTML()
+
+            _DialogHTML.CLOSE__dialog_new_employee()
+            _TablesHTML.HTML__update_table_employee(this._employeesService.db_read_response)
+        }
     }
 
     async read() {
@@ -53,6 +62,7 @@ export class EmployeesBusiness {
         const response = this._employeesService.db_read_response
         if (!response.length) {
             alert(`error na listagem de funcionarios`)
+            this._read_data = this._employeesService.db_read_response
         } else {
             this._read_data = this._employeesService.db_read_response
         }
