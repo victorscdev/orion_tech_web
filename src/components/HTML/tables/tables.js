@@ -11,24 +11,16 @@ export class TablesHTML {
         <thead>
             <tr>
                 <th>Nome do Funcionario</th>
-                <th>Cargo</th>
-                <th>Departamento</th>
-                <th>Salario(bruto)</th>
-                <th>Beneficio</th>
-                <th>Deduções</th>
-                <th>Salario liquido</th>
+                <th>Data de Admissão</th>
+                <th>Valor por Hora(R$)</th>
             </tr>
         </thead>
         <tbody>
             ${array.map((employee) => `
             <tr>
-                <td>${ employee.name }</td>
-                <td>${ employee.office }</td>
-                <td>${ employee.departament }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.wage) }</td>
-                <td>${ employee.benefits }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.deductions) }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.net_salary) }</td>
+                <td>${ employee.nome }</td>
+                <td>${ employee.data_admissao }</td>
+                <td>${ _globalFunctions.FORMAT__number_to_money(employee.vlr_hora) }</td>
             </tr>  
             `).join('')}
         </tbody>
@@ -47,24 +39,16 @@ export class TablesHTML {
         <thead>
             <tr>
                 <th>Nome do Funcionario</th>
-                <th>Cargo</th>
-                <th>Departamento</th>
-                <th>Salario(bruto)</th>
-                <th>Beneficio</th>
-                <th>Deduções</th>
-                <th>Salario liquido</th>
+                <th>Data de Admissão</th>
+                <th>Valor por Hora(R$)</th>
             </tr>
         </thead>
         <tbody>
             ${array.map((employee) => `
             <tr>
-                <td>${ employee.name }</td>
-                <td>${ employee.office }</td>
-                <td>${ employee.departament }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.wage) }</td>
-                <td>${ employee.benefits }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.deductions) }</td>
-                <td>${ _globalFunctions.FORMAT__number_to_money(employee.net_salary) }</td>
+                <td>${ employee.nome }</td>
+                <td>${ employee.data_admissao }</td>
+                <td>${ _globalFunctions.FORMAT__number_to_money(employee.vlr_hora) }</td>
             </tr>  
             `).join('')}
         </tbody>

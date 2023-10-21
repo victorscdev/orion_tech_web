@@ -9,25 +9,30 @@ export const array_header = [
         handler: _handlers.get_employee
     },
     {
-        name: 'pagamentos',
-        title: 'Pagamentos',
-        handler: _handlers.get_payments
-    },
-    {
-        name: 'deducoes',
-        title: 'Deduções',
-        handler: _handlers.get_deductions
-    },
-    {
-        name: 'beneficios',
-        title: 'Beneficios',
-        handler: _handlers.get_benefits
-    },
-    {
-        name: 'folha_ponto',
-        title: 'Folha de Pagamento',
-        handler: _handlers.get_time_sheet
-    },
+        name: 'apontamento_horas',
+        title: 'Apontamento de Horas',
+        handler: _handlers.get_apontamento_horas
+    }
+    // {
+    //     name: 'pagamentos',
+    //     title: 'Pagamentos',
+    //     handler: _handlers.get_payments
+    // },
+    // {
+    //     name: 'deducoes',
+    //     title: 'Deduções',
+    //     handler: _handlers.get_deductions
+    // },
+    // {
+    //     name: 'beneficios',
+    //     title: 'Beneficios',
+    //     handler: _handlers.get_benefits
+    // },
+    // {
+    //     name: 'folha_ponto',
+    //     title: 'Folha de Pagamento',
+    //     handler: _handlers.get_time_sheet
+    // },
 ]
 
 export const array_employees = [
@@ -54,22 +59,17 @@ export const array_employees = [
 export const array_form_employees = [
     {
         label: 'Nome do Funcionario',
-        for: 'name',
+        for: 'nome',
         type: 'text'
     },
     {
-        label: 'Cargo',
-        for: 'office',
-        type: 'text'
+        label: 'Data de Admissão',
+        for: 'data_admissao',
+        type: 'date'
     },
     {
-        label: 'Departamento',
-        for: 'departament',
-        type: 'text'
-    },
-    {
-        label: 'Salario inicial',
-        for: 'wage',
+        label: 'Valor por Hora',
+        for: 'vlr_hora',
         type: 'number'
     },
 ]

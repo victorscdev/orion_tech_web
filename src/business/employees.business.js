@@ -1,13 +1,16 @@
+import { GlobalFunctions } from "../model/global_functions.js";
 import { EmployeesService } from "../services/employees.service.js";
 import { DialogHTML } from "../components/HTML/dialogs/dialogs.js";
 import { TablesHTML } from "../components/HTML/tables/tables.js";
 
 export class EmployeesBusiness {
     _employeesService;
+    _GlobalFunctions;
     _read_data;
 
     constructor() {
         this._employeesService = new EmployeesService()
+        this._GlobalFunctions = new GlobalFunctions()
     }
 
     set_salary_deduction(wage, deduction) {
@@ -24,12 +27,9 @@ export class EmployeesBusiness {
 
     set_new(information) {
         const info = {
-            name: information.name,
-            office: information.office,
-            departament: information.departament,
-            wage: information.wage,
-            deductions: this.set_salary_deduction(information.wage, this.set_net_salary(information.wage)),
-            net_salary: this.set_net_salary(information.wage),
+            nome: information.nome,
+            data_admissao: this._GlobalFunctions.FORMAT__data(information.data_admissao),
+            vlr_hora: information.vlr_hora,
         }
 
         return info
@@ -51,7 +51,7 @@ export class EmployeesBusiness {
         if(this._employeesService.db_create_response.ok) {
            await this._employeesService.db_read()
             const _TablesHTML = new TablesHTML()
-
+            
             _DialogHTML.CLOSE__dialog_new_employee()
             _TablesHTML.HTML__update_table_employee(this._employeesService.db_read_response)
         }

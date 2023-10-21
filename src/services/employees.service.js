@@ -11,13 +11,13 @@ export class EmployeesService {
     }
 
     async db_create(payload) {
-        await this._db.post(`employees`, `POST`, payload)
+        await this._db.post(`funcionarios`, `POST`, payload)
             .then((objectAssync) => this.db_create_response  = objectAssync)
             .catch((error) => console.error(error))
     }
 
     async db_read() {
-        await this._db.get(`employees`)
+        await this._db.get(`funcionarios`)
             .then((objectAssync) => objectAssync.json())
             .then((response) => this.db_read_response = response)
             .catch((error) => console.error(error))
