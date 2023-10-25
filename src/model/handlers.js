@@ -1,6 +1,7 @@
 import { EmployeesPages } from "../components/PAGES/employees/employees.pages.js";
 import { GlobalFunctions } from "../model/global_functions.js"
 
+import { HTML__add_tags_apontamento_horas } from "../components/PAGES/apontamento_horas/apontamento_horas.pages.js";
 export class Handlers {
     constructor() {}
 
@@ -14,7 +15,7 @@ export class Handlers {
         
     }
 
-    get_apontamento_horas(event) {
+    async get_apontamento_horas(event) {
         const _globalFunctions = new GlobalFunctions();
 
         _globalFunctions.HTML__active_li(event.target.textContent)
@@ -22,7 +23,7 @@ export class Handlers {
         const HTML__h1 = document.createElement('h1')
         HTML__h1.innerText = 'Apontamento de Horas'
         
-        _globalFunctions.HTML__clear_main_and_add_info_main(HTML__h1)
+        _globalFunctions.HTML__clear_main_and_add_info_main(await HTML__add_tags_apontamento_horas())
         
     }
     
